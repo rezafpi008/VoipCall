@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/dialerFragment">
+
+    <fragment
+        android:id="@+id/dialerFragment"
+        android:name="com.example.materialdesignvoipcall.mainFragments.DialerFragment"
+        android:label="fragment_call"
+        tools:layout="@layout/fragment_dialer" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.materialdesignvoipcall.mainFragments.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/conferenceFragment"
+        android:name="com.example.materialdesignvoipcall.mainFragments.ConferenceFragment"
+        android:label="fragment_conference"
+        tools:layout="@layout/fragment_conference" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.materialdesignvoipcall.mainFragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

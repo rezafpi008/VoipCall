@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Voip Call</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_password">Password</string>
+    <string name="lbl_forget">Forgot Password? Click here!</string>
+    <string name="btn_login">Login</string>
+    <string name="hint_employee_id">User Name</string>
+    <string name="user_login">User Login</string>
+    <string name="full_name">Full Name</string>
+    <string name="dial_number">Dial Number</string>
+    <string name="registration">User Registration</string>
+    <string name="lbl_register">Don\'t have an account? Register here!</string>
+    <string name="lbl_login">Already Registered? Click here!</string>
+    <string name="hint_re_password">Confirm Password</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="dialPad">DialPad</string>
+    <string name="contact">Contact</string>
+    <string name="conference">Conference</string>
+    <string name="profile">Profile</string>
+    <string name="dialer_address_bar_hint">Enter a number or an address</string>
+    <string name="fill_this_field">Please fill this field</string>
+    <string name="incoming_call">Incoming Call</string>
+    <string name="outgoing_call">Outgoing Call</string>
+    <string name="select_transfer_type">Please select transfer type</string>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004188</color>
+    <color name="colorPrimaryDark">#002B5A</color>
+    <color name="colorPrimaryLight">#7772ff</color>
+    <color name="transparent_white_hex_7">#77ffffff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_title">#9595A3</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+
+    <color name="red">#F70000</color>
+    <color name="green">#96c11f</color>
+    <color name="orange">#F75C1E</color>
+    <color name="gray">#9595A3</color>
+    <color name="grey_dark">#444444</color>
+    <color name="grey">#808080</color>
+    <color name="grey_light">#c4c4c4</color>
+
+
+    <color name="mtrl_textinput_default_box_stroke_color">#fff</color>
+</resources>

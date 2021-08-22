@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dialerFragment"
+        android:icon="@drawable/ic_dialpad"
+        android:title="@string/dialPad" />
+
+    <item
+        android:id="@+id/contactFragment"
+        android:icon="@drawable/ic_contacts"
+        android:title="@string/contact" />
+
+    <item
+        android:id="@+id/conferenceFragment"
+        android:icon="@drawable/ic_conference"
+        android:title="@string/conference" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_person"
+        android:title="@string/profile" />
+
+</menu>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callViewModel"
+            type="com.example.materialdesignvoipcall.viewModel.CallViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/call_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="@{callViewModel.callLayout?View.VISIBLE:View.GONE}">
+
+                <RelativeLayout
+                    android:id="@+id/video_call_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_50sdp"
+                    android:visibility="@{callViewModel.videoCallView?View.VISIBLE:View.GONE}">
+
+                    <TextureView
+                        android:id="@+id/remote_video_surface"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/switch_camera"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/round_button_background"
+                        android:padding="10dp"
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/camera_switch_default" />
+
+                    <org.linphone.mediastream.video.capture.CaptureTextureView
+                        android:id="@+id/local_preview_video_surface"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/call_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/toggle_video"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_video_call"
+                        android:tint="@{callViewModel.videoCallState?@color/grey:@color/white}" />
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/mute_mic"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_mic_off"
+                        android:tint="@{callViewModel.microphoneState?@color/grey:@color/white}" />
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/toggle_speaker"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/ic_speaker"
+                        android:tint="@{callViewModel.speakerState?@color/grey:@color/white}" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/hang_up"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_light"
+                        android:padding="@dimen/_5sdp"
+                        android:tint="@color/red"
+                        app:srcCompat="@drawable/ic_hang_up" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/pause"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/round_button_background"
+                android:padding="10dp"
+                android:src="@drawable/ic_pause" />
+
+            <RelativeLayout
+                android:id="@+id/user_call"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_centerInParent="true"
+                android:visibility="@{callViewModel.videoCallView?View.GONE:View.VISIBLE}">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tint="@color/colorPrimary"
+                    app:srcCompat="@drawable/round_button_background" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:tint="@color/grey_dark"
+                    app:srcCompat="@drawable/round_button_background" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="TextView"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>
