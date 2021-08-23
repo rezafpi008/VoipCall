@@ -23,3 +23,7 @@ This project uses the Linphone library for voip calls
 **6. Build the project on two devices**
 
 **7. To make a call, you can enter another username, sip account created in sip2sip.info and make the call**
+#  Built With
+## [Sip2sip.info](https://mdns.sipthor.net/register_sip_account.phtml)
+
+## [LinPhone](http://www.linphone.org/)
