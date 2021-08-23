@@ -15,7 +15,9 @@ This project uses the Linphone library for voip calls
 
 **5. Enter the following values to enter the application**
 >Username -> Sip account username
+>
 >Password -> Sip account password
+>
 >Domain -> sip2sip.info
 
 **6. Build the project on two devices**
