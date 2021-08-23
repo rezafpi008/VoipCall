@@ -26,4 +26,4 @@ This project uses the Linphone library for voip calls
 #  Built With
 ## [Sip2sip.info](https://mdns.sipthor.net/register_sip_account.phtml)
 
-## [LinPhone](http://www.linphone.org/)
+## [LinPhone Sdk](http://www.linphone.org/)
